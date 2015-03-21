@@ -1,4 +1,4 @@
-	<div id="time"></div>	<div class="game" style="padding-bottom: 30px;">		<button id="randombutton" class="smbutton">Random Teams2</button><button id="favoredbutton" class="smbutton">Favored Teams</button><button id="homebutton" class="smbutton">Home Teams</button>	</div><br />
+	<div id="time"></div>	<div class="game" style="padding-bottom: 30px;">		<button id="randombutton" class="smbutton">Random Teams23</button><button id="favoredbutton" class="smbutton">Favored Teams</button><button id="homebutton" class="smbutton">Home Teams</button>	</div><br />
 	<div class="game" style="padding-bottom: 30px;">
 		<label for="name">Name: <input type="text" id="name" maxlength="20"></label>
 		<label for="email">Email: <input type="text" id="email"></label>
