@@ -1,16 +1,17 @@
-2/1 6:30 ET,Coin toss - Heads,,Coin toss - Tails
-2/1 6:30 ET,Tom Brady Total Passing Yards 260 or More,,Tom Brady Total Passing Yards  259 or Less
-2/1 6:30 ET,Tom Brady Total Completions 23 or More,,Tom Brady Total Completions 22 or Less
-2/1 6:30 ET,Tom Brady Will Throw a TD Pass First,,Tom Brady Will Throw an Interception First
-2/1 6:30 ET,Tom Brady Will Throw 3 or More TD Passes,,Tom Brady Will Throw 2 or Less TD Passes
-2/1 6:30 ET,LeGarrette Blount 62 or More Rushing Yards,,LeGarrette Blount 61 or Less Rushing Yards
-2/1 6:30 ET,Rob Gronkowski Total Receiving Yards 72 or More,,Rob Gronkowski Total Receiving Yards 71 or Less
-2/1 6:30 ET,Yes TD for Rob Gronkowski,,No TD for Rob Gronkowski
-2/1 6:30 ET,Yes TD for Julian Edelman,,No TD for Julian Edelman
-2/1 6:30 ET,Yes TD for Brandon LaFell,,No TD for Brandon LaFell
-2/1 6:30 ET,Yes TD for Danny Amendola,,No TD for Danny Amendola
-2/1 6:30 ET,Darrelle Revis 1 or More Interceptions,,Darrelle Revis 0 Interceptions
-2/1 6:30 ET,Stephen Gostkowski 9 or More Points,,Stephen Gostkowski 8 or Less Points
-2/1 6:30 ET,Yes Successful 2 point Conversion,,No Successful 2 point Conversion
-2/1 6:30 ET,Seahawks Will Win,,Patriots Will Win
-_WEEK:21
+9/4 8:35 ET,At Seattle,-5.5,Green Bay,
+9/7 1:00 ET,At Atlanta,-1.5,New Orleans,
+9/7 1:00 ET,At St. Louis,-5,Minnesota,
+9/7 1:00 ET,At Pittsburgh,-5,Cleveland,
+9/7 1:00 ET,At Philadelphia,-11,Jacksonville,
+9/7 1:00 ET,At NY Jets,-4.5,Oakland,
+9/7 1:00 ET,At Baltimore,-2.5,Cincinnati,
+9/7 1:00 ET,At Chicago,-6.5,Buffalo,
+9/7 1:00 ET,At Houston,-2.5,Washington,
+9/7 1:00 ET,At Kansas City,-5.5,Tennessee,
+9/7 1:00 ET,New England,-3.5,At Miami,
+9/7 4:25 ET,Carolina,-2.5,At Tampa Bay,
+9/7 4:25 ET,San Francisco,-3.5,At Dallas,
+9/7 8:30 ET,At Denver,-7,Indianapolis,
+9/8 7:10 ET,At Detroit,-4,NY Giants,
+9/8 10:25 ET,At Arizona,-3,San Diego,
+_WEEK:1

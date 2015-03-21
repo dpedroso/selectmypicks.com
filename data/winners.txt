@@ -1,0 +1,8 @@
+Baltimore
+Carolina
+Chicago
+Cincinnati
+San Diego
+------------------
+encrypt:yes
+week:1
