@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<games>
+  <game>
+    <winner>Coin toss - Tails
+</winner>
+    <loser>Coin toss - Heads</loser>
+  </game>
+  <game>
+    <winner>Tom Brady Total Passing Yards 260 or More</winner>
+    <loser>Tom Brady Total Passing Yards  259 or Less
+</loser>
+  </game>
+  <game>
+    <winner>Tom Brady Total Completions 23 or More</winner>
+    <loser>Tom Brady Total Completions 22 or Less
+</loser>
+  </game>
+  <game>
+    <winner>Tom Brady Will Throw an Interception First
+</winner>
+    <loser>Tom Brady Will Throw a TD Pass First</loser>
+  </game>
+  <game>
+    <winner>Tom Brady Will Throw 3 or More TD Passes</winner>
+    <loser>Tom Brady Will Throw 2 or Less TD Passes
+</loser>
+  </game>
+  <game>
+    <winner>LeGarrette Blount 61 or Less Rushing Yards
+</winner>
+    <loser>LeGarrette Blount 62 or More Rushing Yards</loser>
+  </game>
+  <game>
+    <winner>Rob Gronkowski Total Receiving Yards 71 or Less
+</winner>
+    <loser>Rob Gronkowski Total Receiving Yards 72 or More</loser>
+  </game>
+  <game>
+    <winner>Yes TD for Rob Gronkowski</winner>
+    <loser>No TD for Rob Gronkowski
+</loser>
+  </game>
+  <game>
+    <winner>Yes TD for Julian Edelman</winner>
+    <loser>No TD for Julian Edelman
+</loser>
+  </game>
+  <game>
+    <winner>Yes TD for Brandon LaFell</winner>
+    <loser>No TD for Brandon LaFell
+</loser>
+  </game>
+  <game>
+    <winner>Yes TD for Danny Amendola</winner>
+    <loser>No TD for Danny Amendola
+</loser>
+  </game>
+  <game>
+    <winner>Darrelle Revis 0 Interceptions
+</winner>
+    <loser>Darrelle Revis 1 or More Interceptions</loser>
+  </game>
+  <game>
+    <winner>Stephen Gostkowski 8 or Less Points
+</winner>
+    <loser>Stephen Gostkowski 9 or More Points</loser>
+  </game>
+  <game>
+    <winner>No Successful 2 point Conversion
+</winner>
+    <loser>Yes Successful 2 point Conversion</loser>
+  </game>
+  <game>
+    <winner>Patriots Will Win
+</winner>
+    <loser>Seahawks Will Win</loser>
+  </game>
+  <mask>no</mask>
+  <week>21</week>
+</games>

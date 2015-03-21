@@ -1,0 +1,27 @@
+<html>
+
+
+<head>
+	<title>Pop up Window</title>
+	<meta charset="UTF-8">
+
+</head>
+
+<script>
+
+	function close_redirect_parent(url) {
+		this.close(); 
+		parent.opener.location.href= url;  
+	}
+	
+</script>
+
+<body>
+	<button onclick="close_redirect_parent('http://google.com');">Close Window</button><br />
+	<a href="#" onclick="close_redirect_parent('http://google.com');">Close Window</a>
+</body>
+
+
+
+
+</html>
