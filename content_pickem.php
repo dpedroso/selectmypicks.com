@@ -37,17 +37,14 @@
 	}	
 	?>
 		<script>									var num = <?php echo $num; ?>;						$("#randombutton").click(function(){									for (g = 0; g < num; g++) { 															$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );															random = Math.floor((Math.random() * 2) + 1); 					if(random==1)						$( '#game_button'+g+'a').toggleClass( 'gameselected', true );					else						$( '#game_button'+g+'b' ).toggleClass( 'gameselected', true );				}							});			$("#favoredbutton").click(function(){						for (g = 0; g < num; g++) { 															$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );										$( '#game_button'+g+'a').toggleClass( 'gameselected', true );				}							});						$("#homebutton").click(function(){						for (g = 0; g < num; g++) { 															$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );										var teama = $('#game_button'+g+'a').text();					var teamb = $('#game_button'+g+'b').text();					if(teama.indexOf("At")>-1)						$( '#game_button'+g+'a').toggleClass( 'gameselected', true );										if(teamb.indexOf("At")>-1)						$( '#game_button'+g+'b').toggleClass( 'gameselected', true );				}							});			
-			$("[id*='game_button']").click(function(){								//$('.content').children('div').children('button').each(function () {
-					// Remove active class from all elements
+			$("[id*='game_button']").click(function(){				
 					$( '#' + this.id.substring(0,this.id.length-1) + 'a' ).toggleClass( 'gameselected', false );
 					$( '#' + this.id.substring(0,this.id.length-1) + 'b' ).toggleClass( 'gameselected', false );
-					// Set the element that was clicked to active
-					$( '#' + this.id ).toggleClass( 'gameselected', true );				//});				
+					$( '#' + this.id ).toggleClass( 'gameselected', true );				
 			});
 		</script>
 	<?php
 		
-	// Close file
 	fclose($file);
 	echo '<br /><div class="game"><button id="submit" class="button">Submit</button></div><br />';
 	?>	
