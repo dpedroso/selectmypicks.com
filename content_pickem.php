@@ -7,7 +7,7 @@
 	$num = 0;
 	$file = fopen("data/games.txt", "r");
 	while(!feof($file)){
-		// Read File
+		
 		$line = fgets($file);
 		
 		if(strpos($line, "WEEK:")){ 
@@ -15,16 +15,16 @@
 			$week = $week_line[1];
 		}
 		else{
-			// Split the line into an array
+			
 			$games_lines_array = explode(',', $line);
-			// Define each part of the line data
+			
 			$time = $games_lines_array[0];
 			$team1 = $games_lines_array[1];
 			$odds = $games_lines_array[2];
 			$team2 = $games_lines_array[3];
 			$overunder = $games_lines_array[4];
 			$find = array();			$find[0] = "(At Toronto)";			$find[1] = "At ";
-			// Add radio controls to form
+			
 			?>			
 			<div class="time"><?php echo $time;?></div>
 			<div class="game">
@@ -36,7 +36,7 @@
 		}
 	}	
 	?>
-		<script>						// Set the number of games			var num = <?php echo $num; ?>;						$("#randombutton").click(function(){									for (g = 0; g < num; g++) { 										// Clear game buttons					$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );										// Generate random Pick					random = Math.floor((Math.random() * 2) + 1); 					if(random==1)						$( '#game_button'+g+'a').toggleClass( 'gameselected', true );					else						$( '#game_button'+g+'b' ).toggleClass( 'gameselected', true );				}							});			$("#favoredbutton").click(function(){						for (g = 0; g < num; g++) { 										// Clear game buttons					$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );										$( '#game_button'+g+'a').toggleClass( 'gameselected', true );				}							});						$("#homebutton").click(function(){						for (g = 0; g < num; g++) { 										// Clear game buttons					$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );										var teama = $('#game_button'+g+'a').text();					var teamb = $('#game_button'+g+'b').text();					if(teama.indexOf("At")>-1)						$( '#game_button'+g+'a').toggleClass( 'gameselected', true );										if(teamb.indexOf("At")>-1)						$( '#game_button'+g+'b').toggleClass( 'gameselected', true );				}							});			
+		<script>									var num = <?php echo $num; ?>;						$("#randombutton").click(function(){									for (g = 0; g < num; g++) { 															$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );															random = Math.floor((Math.random() * 2) + 1); 					if(random==1)						$( '#game_button'+g+'a').toggleClass( 'gameselected', true );					else						$( '#game_button'+g+'b' ).toggleClass( 'gameselected', true );				}							});			$("#favoredbutton").click(function(){						for (g = 0; g < num; g++) { 															$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );										$( '#game_button'+g+'a').toggleClass( 'gameselected', true );				}							});						$("#homebutton").click(function(){						for (g = 0; g < num; g++) { 															$( '#game_button'+g+'a').toggleClass( 'gameselected', false );					$( '#game_button'+g+'b').toggleClass( 'gameselected', false );										var teama = $('#game_button'+g+'a').text();					var teamb = $('#game_button'+g+'b').text();					if(teama.indexOf("At")>-1)						$( '#game_button'+g+'a').toggleClass( 'gameselected', true );										if(teamb.indexOf("At")>-1)						$( '#game_button'+g+'b').toggleClass( 'gameselected', true );				}							});			
 			$("[id*='game_button']").click(function(){								//$('.content').children('div').children('button').each(function () {
 					// Remove active class from all elements
 					$( '#' + this.id.substring(0,this.id.length-1) + 'a' ).toggleClass( 'gameselected', false );
