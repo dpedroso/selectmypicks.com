@@ -1,0 +1,92 @@
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body style="font-family: arial">
+
+<h1>Update Sample</h1>
+<textarea style="width: 870px; height: 160px; background: black; color: white;">
+/* Only downside is you can't serialize a form and send because the JSON must be in the correct order */
+
+$( "#update" ).click( function(){
+   $.post( "index.php?update_user_by_id", { id:$("#id").val(), email:$("#email").val() }, function() {
+      $.post( "index.php?select_all_users", function( data ) {
+         $("#update_result").val( data );
+      });
+   });
+});
+</textarea>
+<br />
+<textarea id="update_result" style="width: 870px; height: 160px; background: black; color: white;"></textarea>
+<br />
+<label for="id">id:<input type="text" id="id" /></label>
+<label for="email">email:<input type="text" id="email" /></label>
+<button id="update">update</button>
+
+
+<h1>Insert Sample</h1>
+<textarea style="width: 870px; height: 160px; background: black; color: white;">
+
+$( "#update" ).click( function(){
+   $.post( "index.php?insert_new_user", { name:$("#insert_name").val(), email:$("#insert_email").val() }, function() {
+      $.post( "index.php?select_all_users", function( data ) {
+         $("#insert_result").val( data );
+      });
+   });
+});
+</textarea>
+<br />
+<textarea id="insert_result" style="width: 870px; height: 160px; background: black; color: white;"></textarea>
+<br />
+<label for="insert_name">name:<input type="text" id="insert_name" /></label>
+<label for="insert_email">email:<input type="text" id="insert_email" /></label>
+<button id="insert">insert</button>
+
+<h1>Select Sample</h1>
+<textarea style="width: 870px; height: 160px; background: black; color: white;">
+
+$( "#select" ).click( function(){
+   $.post( "index.php?select_user_by_id", { id:$("#user_id").val() }, function() {
+         $("#select_result").val( data );
+   });
+});
+</textarea>
+<br />
+<textarea id="select_result" style="width: 870px; height: 160px; background: black; color: white;"></textarea>
+<br />
+<label for="user_id">id:<input type="text" id="user_id" /></label>
+<button id="select">select</button>
+
+<script>
+
+	/* Only downside is you can't serialize a form and POST because the JSON order must match stored procedure */
+	$( "#update" ).click( function(){
+		$.post( "index.php?update_user_by_id", { id:$("#id").val(), email:$("#email").val() }, function() {
+			$.post( "index.php?select_all_users", function(data) {
+				$("#update_result").val( data );
+			});
+		});
+	});
+	
+	$( "#insert" ).click( function(){
+		$.post( "index.php?insert_new_user", { name:$("#insert_name").val(), email:$("#insert_email").val() }, function() {
+			$.post( "index.php?select_all_users", function(data) {
+				$("#insert_result").val( data );
+			});
+		});
+	});	
+	
+	$( "#select" ).click( function(){
+		$.post( "index.php?select_user_by_id", { id:$("#user_id").val() }, function(data) {
+		   $("#select_result").val( data );
+		});
+	});
+	
+</script>
+
+</body>
+
+</html>
