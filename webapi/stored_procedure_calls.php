@@ -27,6 +27,9 @@
 				break;			
 			case "update":
 				mysql_query("call ".$name."(".get_arg_values($args).")");
+				break;			
+			case "delete":
+				mysql_query("call ".$name."(".get_arg_values($args).")");
 				break;
 			default:
 				return false;

@@ -1,8 +1,8 @@
 <html>
 
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!--- Load Jquery --->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <body style="font-family: arial">
@@ -60,6 +60,30 @@ $( "#select" ).click( function(){
 <label for="user_id">id:<input type="text" id="user_id" /></label>
 <button id="select">select</button>
 
+
+<h1>Delete Sample</h1>
+<textarea style="width: 870px; height: 160px; background: black; color: white;">
+
+$( "#delete" ).click( function(){
+	$.post( "index.php?delete_user_by_id", { id:$("#delete_user_id").val() }, function() {
+		$.post( "index.php?select_all_users", function(data) {
+			if(data.length>5){
+				$("#delete_result").val( data );
+			}
+		});
+	});
+});
+</textarea>
+<br />
+<textarea id="delete_result" style="width: 870px; height: 160px; background: black; color: white;"></textarea>
+<br />
+<label for="delete_user_id">User:<select id="delete_user_id" /></select></label>
+<button id="delete">delete</button>
+
+
+
+
+
 <script>
 
 	/* Only downside is you can't serialize a form and POST because the JSON order must match stored procedure */
@@ -68,6 +92,9 @@ $( "#select" ).click( function(){
 			$.post( "index.php?select_all_users", function(data) {
 				$("#update_result").val( data );
 			});
+		})
+		.done(function(){
+		   update_users();
 		});
 	});
 	
@@ -76,6 +103,11 @@ $( "#select" ).click( function(){
 			$.post( "index.php?select_all_users", function(data) {
 				$("#insert_result").val( data );
 			});
+		})		
+		.done(function(){
+			$("#insert_email").val("");
+			$("#insert_name").val("");
+		   update_users();
 		});
 	});	
 	
@@ -85,6 +117,37 @@ $( "#select" ).click( function(){
 		});
 	});
 	
+	$( "#delete" ).click( function(){
+		$.post( "index.php?delete_user_by_id", { id:$("#delete_user_id").val() }, function() {
+			$.post( "index.php?select_all_users", function(data) {
+				if(data.length>5){
+					$("#delete_result").val( data );
+				}
+			});
+		})
+		.done(function(){
+		   update_users();
+		});
+	});
+	
+	update_users();
+	
+	function update_users(){
+		$("#delete_user_id option").remove();
+		$.post( "index.php?select_all_users", function(data) {
+			$("#insert_result").val(data);
+			$("#update_result").val(data);
+			$("#select_result").val(data);
+			$("#delete_result").val(data);
+			if(data.length>5){
+				$.each(JSON.parse(data), function(){
+					$("#delete_user_id").append('<option value='+this.id+'>'+this.name+'</option>');
+				});
+			}
+		});
+		
+	}
+
 </script>
 
 </body>
