@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+    <head> 
 
 		<title>Select My Picks</title>
         <meta charset="UTF-8">
